@@ -210,15 +210,15 @@ with col_heat:
     ))
     
     fig_heatmap.update_layout(
-        xaxis=dict(title=f"Gols {selecao_lab2}", titlefont=dict(color='#00ccff', size=12), tickfont=dict(color='#8a8a9a', size=11)),
-        yaxis=dict(title=f"Gols {selecao_lab1}", titlefont=dict(color='#00ff88', size=12), tickfont=dict(color='#8a8a9a', size=11)),
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        font_color='#8a8a9a',
-        height=320,
-        margin=dict(l=50, r=20, t=20, b=50)
-    )
-    
+        xaxis=dict(
+            title=dict(
+                text=f"Gols {selecao_lab2}",
+                font=dict(color='#00ccff', size=12)
+            ),
+            tickfont=dict(color='#8a8a9a', size=11)
+        )
+    ) 
+
     st.plotly_chart(fig_heatmap, use_container_width=True)
 
 st.markdown("---")
