@@ -216,16 +216,24 @@ if time1 and time2 and time1 != time2:
         tickfont=dict(color='#8a8a9a')
     )       ))
         
-        fig_heatmap.update_layout(
-            xaxis=dict(title=f"Gols {time2}", titlefont=dict(color='#00ccff', size=14), tickfont=dict(color='#8a8a9a', size=13)),
-            yaxis=dict(title=f"Gols {time1}", titlefont=dict(color='#00ff88', size=14), tickfont=dict(color='#8a8a9a', size=13)),
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font_color='#8a8a9a',
-            height=500,
-            margin=dict(l=60, r=20, t=30, b=60)
-        )
-        
+    fig_heatmap.update_layout(
+        xaxis=dict(
+            title=dict(
+                text=f"Gols {time2}",
+                font=dict(color='#00ccff', size=14)
+            ),
+            tickfont=dict(color='#8a8a9a', size=13)
+        ),
+        yaxis=dict(
+            title=dict(
+                text=f"Gols {time1}",
+                font=dict(color='#00ccff', size=14)
+            ),
+            tickfont=dict(color='#8a8a9a', size=13)
+        ),
+        margin=dict(l=60, r=20, t=30, b=60)
+    )       
+
         st.plotly_chart(fig_heatmap, use_container_width=True)
     
     with col_top5:
