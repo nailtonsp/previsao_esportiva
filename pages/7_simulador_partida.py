@@ -209,8 +209,12 @@ if time1 and time2 and time1 != time2:
             textfont={"size": 14, "color": "white"},
             hovertemplate=f"{time1}: %{{y}} x %{{x}} :{time2}<br>Probabilidade: %{{z:.2f}}%<extra></extra>",
             showscale=True,
-            colorbar=dict(title="Prob (%)", titlefont=dict(color='#8a8a9a'), tickfont=dict(color='#8a8a9a'))
-        ))
+             colorbar=dict(
+            title=dict(
+            text="Prob (%)",
+            font=dict(color='#8a8a9a')),
+        tickfont=dict(color='#8a8a9a')
+    )       ))
         
         fig_heatmap.update_layout(
             xaxis=dict(title=f"Gols {time2}", titlefont=dict(color='#00ccff', size=14), tickfont=dict(color='#8a8a9a', size=13)),
