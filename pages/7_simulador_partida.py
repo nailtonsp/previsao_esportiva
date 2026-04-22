@@ -214,25 +214,25 @@ if time1 and time2 and time1 != time2:
             text="Prob (%)",
             font=dict(color='#8a8a9a')),
         tickfont=dict(color='#8a8a9a')
-    )       ))
+        )       ))
         
-    fig_heatmap.update_layout(
-        xaxis=dict(
-            title=dict(
-                text=f"Gols {time2}",
-                font=dict(color='#00ccff', size=14)
+        fig_heatmap.update_layout(
+            xaxis=dict(
+                title=dict(
+                    text=f"Gols {time2}",
+                    font=dict(color='#00ccff', size=14)
+                ),
+                tickfont=dict(color='#8a8a9a', size=13)
             ),
-            tickfont=dict(color='#8a8a9a', size=13)
-        ),
-        yaxis=dict(
-            title=dict(
-                text=f"Gols {time1}",
-                font=dict(color='#00ccff', size=14)
+            yaxis=dict(
+                title=dict(
+                    text=f"Gols {time1}",
+                    font=dict(color='#00ccff', size=14)
+                ),
+                tickfont=dict(color='#8a8a9a', size=13)
             ),
-            tickfont=dict(color='#8a8a9a', size=13)
-        ),
-        margin=dict(l=60, r=20, t=30, b=60)
-    )       
+            margin=dict(l=60, r=20, t=30, b=60)
+        )       
 
         st.plotly_chart(fig_heatmap, use_container_width=True)
     
